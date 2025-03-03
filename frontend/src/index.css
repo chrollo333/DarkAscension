@@ -11,7 +11,7 @@
 }
 
 body {
-  background: linear-gradient(45deg, #5f2a6d, #1b0f32, #4a1c56);
+  background: linear-gradient(45deg, #381941, #1b0f32, #1d0922);
   background-size: 400% 400%;
   animation: void-energy 10s ease infinite;
   color: white;

@@ -4,6 +4,9 @@ Website Structure
 Home Page – Introduction to Shadow Priest gameplay, your credentials, and site navigation.
 
 Shadow Priest Guide (Your Content - CRUD Enabled)
+SELECT YOUR SPEC (TWO ICONS, ARCHON AND VOIDWEAVER, BY CLICKING YOU GO INTO A DIFFERENT GUIDE)
+
+
 Sections for Talents, Rotations, Gear, PvP/PvE Tips, Macros, etc.
 Each section can have its own article that you can update as the meta evolves.
 
@@ -46,3 +49,4 @@ Links with hover shimmer animations.
 
 
 
+https://discordapp.com/users/232067112623931393

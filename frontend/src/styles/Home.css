@@ -42,9 +42,10 @@
     text-shadow: 0 0 10px rgba(138, 43, 226, 0.4),  /* Soft purple haze */
     0 0 20px rgba(75, 0, 130, 0.5),   /* Deep indigo for depth */
     0 0 30px rgba(0, 0, 0, 0.9);      /* Black core for void effect */
+    pointer-events: none;
 }
 
-button {
+.ascend-button {
   animation: fadeIn 2s ease-out;
   font-family: 'NEXA';
   font-size: 3rem;
@@ -54,26 +55,26 @@ button {
   0 0 20px rgba(75, 0, 130, 0.5),   /* Deep indigo for depth */
   0 0 30px rgba(0, 0, 0, 0.9);      /* Black core for void effect */
   background-color: transparent;    /* Remove default background */
-    border: 2px solid #E6E6FA;        /* Add a border */
-    padding: 10px 20px;               /* Add padding */
-    border-radius: 5px;               /* Add rounded corners */
-    cursor: pointer;                  /* Change cursor on hover */
-    transition: background-color 0.3s, color 0.3s;
+  padding: 10px 20px;               /* Add padding */
+  cursor: pointer;                  /* Change cursor on hover */
+  transition: background-color 0.3s, color 0.5s, transform 0.3s;
+  text-decoration: none;
 
 }
-
+.ascend-button:hover{
+  transform: scale(1.2);
+  text-shadow: 0 0 30px #b32990;
+  -webkit-text-stroke: 1.5px #b32990;
+}
 .scroll-down {
     position: absolute;
     bottom: 10%;
     font-size: 1.2rem;
-    opacity: 0.7;
     animation: pulse 1.5s infinite alternate;
+    font-family: 'Poppins';
+    cursor: pointer;
   }
   
-  @keyframes pulse {
-    0% { transform: translateY(0); opacity: 0.7; }
-    100% { transform: translateY(10px); opacity: 1; }
-  }
 
 
 .about-section {
@@ -91,13 +92,13 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 50%;
+  width: 70%;
   text-align: left;
 }
 
 
 .about-text {
-  width: 40%;
+  width: 60%;
   text-align:left;
   margin-bottom:20px;
   font-family: 'Poppins';
@@ -108,4 +109,92 @@ button {
   width: auto;
   height: 300px;
   filter: drop-shadow(0 0 50px rgba(138, 43, 226, 0.5));
+}
+
+
+.bottom-section {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  margin: 5px 0;
+  font-family: 'NEXA';
+  font-size: 1.5rem;
+  color: #E6E6FA;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #b32990;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  a {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    width: 70%;
+    font-size: 1.1rem;
+  }
+
+  .xalatath {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  a {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .xalatath {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  .about-text {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .xalatath {
+    height: 150px;
+  }
 }
