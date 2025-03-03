@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'NEXA';
+    src: url('../assets/Nexa-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src:  url('../assets/Poppins-Light.ttf') format('truetype');    
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(1.1);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0px);
+    }
+  }
+
+.intro-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.title {
+    animation: fadeIn 2s ease-out;
+    font-family: 'NEXA';
+    font-size: 6rem;
+    font-weight: 900;
+    color: #E6E6FA;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.4),  /* Soft purple haze */
+    0 0 20px rgba(75, 0, 130, 0.5),   /* Deep indigo for depth */
+    0 0 30px rgba(0, 0, 0, 0.9);      /* Black core for void effect */
+}
+
+button {
+  animation: fadeIn 2s ease-out;
+  font-family: 'NEXA';
+  font-size: 3rem;
+  font-weight: 900;
+  color: #E6E6FA;
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.4),  /* Soft purple haze */
+  0 0 20px rgba(75, 0, 130, 0.5),   /* Deep indigo for depth */
+  0 0 30px rgba(0, 0, 0, 0.9);      /* Black core for void effect */
+  background-color: transparent;    /* Remove default background */
+    border: 2px solid #E6E6FA;        /* Add a border */
+    padding: 10px 20px;               /* Add padding */
+    border-radius: 5px;               /* Add rounded corners */
+    cursor: pointer;                  /* Change cursor on hover */
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 10%;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% { transform: translateY(0); opacity: 0.7; }
+    100% { transform: translateY(10px); opacity: 1; }
+  }
+
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  height: 100vh;
+  padding: 20px;
+}
+
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  text-align: left;
+}
+
+
+.about-text {
+  width: 40%;
+  text-align:left;
+  margin-bottom:20px;
+  font-family: 'Poppins';
+  font-size: 1.2rem;
+}
+
+.xalatath {
+  width: auto;
+  height: 300px;
+  filter: drop-shadow(0 0 50px rgba(138, 43, 226, 0.5));
+}

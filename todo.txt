@@ -1,0 +1,77 @@
+1. Set Up Your Development Environment:
+Install Python & Django (for backend):
+Install Python (preferably v3.8+)
+Install Django via pip install django
+Install PostgreSQL and psycopg2 (pip install psycopg2 for PostgreSQL integration)
+Install Node.js & React (for frontend):
+Install Node.js (LTS version)
+
+Create a new React project using npx create-react-app dark-ascension-frontend
+
+
+2. Folder Structure:
+Here’s a suggested folder structure for the project:
+
+bash
+Copy
+Edit
+dark-ascension/
+├── backend/                          # Django Backend
+│   ├── dark_ascension/                # Django app for your site
+│   │   ├── __init__.py
+│   │   ├── settings.py                # Django settings
+│   │   ├── urls.py                    # Backend URL routes
+│   │   ├── models.py                  # Django models (User, Guides, News, etc.)
+│   │   ├── views.py                   # Django views to render pages and APIs
+│   │   └── migrations/                # Database migrations
+│   ├── manage.py                      # Django management script
+│   ├── requirements.txt               # List of backend dependencies
+│   └── db.sqlite3                     # Database file (or you’ll connect to PostgreSQL)
+├── frontend/                         # React Frontend
+│   ├── public/
+│   │   ├── index.html                 # Main HTML template for React app
+│   ├── src/
+│   │   ├── components/                # Reusable React components (Navbar, Footer, GuideCard, etc.)
+│   │   ├── pages/                     # Page components (Home, News, Guides, etc.)
+│   │   ├── App.js                     # Main React component
+│   │   ├── index.js                   # Entry point for React
+│   │   └── styles/                    # CSS/SCSS files or Tailwind setup
+│   ├── package.json                   # React app dependencies
+│   └── .env                           # Environment variables (for API URLs, etc.)
+├── .gitignore                         # Git ignore file to exclude unnecessary files
+└── README.md                          # Documentation for your project
+3. Backend (Django):
+Set up Django: Run django-admin startproject dark_ascension inside the backend/ directory.
+Create Django Apps: Inside your Django project, create apps for different sections like Guides, News, and User Management:
+python manage.py startapp guides
+python manage.py startapp news
+python manage.py startapp users
+Model Your Database: Define models like Guide, News, User with their relationships and necessary fields in the respective app's models.py.
+
+
+4. Frontend (React):
+Set up React: In the frontend/ directory, run npx create-react-app dark-ascension-frontend to set up the frontend.
+Components and Pages:
+Create separate folders for reusable components and page components.
+Example components: Navbar, GuideCard, NewsCard.
+Example pages: HomePage, GuidePage, NewsPage.
+Fetch Data from Django API: You'll need to set up Django to serve data via APIs (using Django Rest Framework) so that your React frontend can consume them.
+
+5. Connecting Backend & Frontend:
+Set up Django REST Framework in the backend to expose APIs for fetching guides, news, and user information.
+In React, use fetch or axios to pull data from the Django API and display it.
+
+6. Database:
+Since you plan to use PostgreSQL, configure it in your Django settings.py file.
+Use psycopg2 to connect Django to PostgreSQL.
+
+7. Styling:
+For the dark purple color scheme and void energy effects, you can use CSS or Tailwind if you decide to get comfortable with it.
+You can use React’s styled-components for scoped styles if you're not using Tailwind.
+
+8. Version Control:
+Initialize a Git repository and use .gitignore to exclude unnecessary files like node_modules or .env.
+
+9. Start Development:
+Start Django server: python manage.py runserver
+Start React app: npm start

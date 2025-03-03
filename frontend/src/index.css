@@ -1,0 +1,20 @@
+@keyframes void-energy {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(45deg, #5f2a6d, #1b0f32, #4a1c56);
+  background-size: 400% 400%;
+  animation: void-energy 10s ease infinite;
+  color: white;
+  font-family: Arial, sans-serif;
+  height: 100vh;  
+}
