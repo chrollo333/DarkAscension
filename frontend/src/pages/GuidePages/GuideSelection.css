@@ -1,0 +1,35 @@
+.guide-selection {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    gap: 10rem;
+}
+
+.guide-link {
+    height: auto;
+    position:relative;
+}
+
+.guide-selection img {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Apply transition to the img element */
+  }
+
+.guide-selection img:hover {
+    cursor: pointer;
+    transform: scale(1.6);
+    box-shadow: 0 10px 20px #7A0BC0;
+}
+
+.guide-link::after {
+    content: '';
+    position:absolute;
+    height:100%;
+    width:100%;
+    background:red;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}

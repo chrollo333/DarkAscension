@@ -3,6 +3,7 @@ import "./Home.css"
 import IntroView from "./components/IntroView";
 import AboutSection from "./components/AboutSection";
 import PanelFooter from "./components/Panels/PanelFooter";
+import Navbar from "../../global/Navbar/Navbar";
 const Home = () => {
 
 
