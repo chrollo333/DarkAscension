@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
-import './Panel.css';  // Create this CSS file for styles
-import image from "../../../../assets/panels/shadow_panel.jpg";
+import './Panel.css';
+import { Link } from 'react-router-dom';
 
-const Panel = ({ title, description }) => {
+
+const Panel = ({ image, title, description, link }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-    title = "GUIDES";
-    description = "yuuuuuuuuuuuuuuuuuuuuj";
+
   return (
-    <div 
-      className={`panel ${isHovered ? 'hovered' : ''}`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="panel-image" style={{ backgroundImage: `url(${image})` }}>
+    <Link to={link} className="panel-link">
+      <div
+        className={`panel ${isHovered ? 'hovered' : ''}`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="panel-image" style={{ backgroundImage: `url(${image})` }}></div>
         <div className="panel-label">{title}</div>
-        <div className="panel-description">
-          {description}
-        </div>
+        {isHovered && <div className="panel-description">{description}</div>}
       </div>
-    </div>
+    </Link>
   );
 };
 
