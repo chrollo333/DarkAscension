@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'NEXA';
+    src: url('../../assets/Nexa-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src:  url('../../assets/Poppins-Light.ttf') format('truetype');    
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+h1 {
+    font-family: 'NEXA';
+    font-weight: bold;
+}
+
+
+
+.guide-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+    font-family: 'Poppins';
+}
+
+.specialization-selection {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.spec-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.spec-buttons button {
+    background: #2b2b4b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    font-family: 'Poppins';
+}
+
+.spec-buttons button:hover {
+    background: #4c4c7f;
+}
+
+.spec-buttons .active {
+    background: #663399;
+    font-weight: bold;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab-container button {
+    background: #333355;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins';
+}
+
+.tab-container button:hover {
+    background: #4c4c7f;
+}
+
+.tab-container .active {
+    background: #663399;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+/* Tab Content */
+.tab-content {
+    background: #252547;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

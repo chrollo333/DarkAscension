@@ -20,7 +20,7 @@ const AboutSection = () => {
           <br />
           <br />It's time for you to
         </p>
-        <a href="/guide" className="ascend-button">
+        <a href="/guides" className="ascend-button">
           ASCEND
         </a>
       </div>
