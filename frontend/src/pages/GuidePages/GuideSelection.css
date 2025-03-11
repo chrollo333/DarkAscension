@@ -110,3 +110,48 @@
         --angle: 360deg;
     }
 }
+
+@media (max-width: 1200px) {
+    .guide-selection {
+        gap: 5rem; /* Reduce gap between items */
+    }
+
+    .guide-link {
+        width: 250px;
+        height: 250px;
+    }
+
+    .guide-link p {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-selection {
+        flex-direction: column; /* Stack items vertically */
+        height: auto; /* Adjust height */
+        padding-top: 60px;
+    }
+
+    .guide-link {
+        width: 200px;
+        height: 200px;
+    }
+
+    .guide-link p {
+        font-size: 0.8rem; /* Adjust font size */
+        padding-top: 30px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-link {
+        width: 150px;
+        height: 150px;
+    }
+
+    .guide-link p {
+        font-size: 0.7rem; /* Adjust font size */
+        padding-top: 20px; /* Adjust padding */
+    }
+}

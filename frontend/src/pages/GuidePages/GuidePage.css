@@ -17,16 +17,15 @@
 h1 {
     font-family: 'NEXA';
     font-weight: bold;
+    font-size: 2.5rem;
 }
-
-
 
 .guide-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    color: white;
+    color: #EAEAEA;
     font-family: 'Poppins';
 }
 
@@ -55,12 +54,18 @@ h1 {
     font-family: 'Poppins';
 }
 
+.spec-buttons #archon.active {
+    background: linear-gradient(90deg, #663399 30%, rgb(189, 163, 15))
+}
+.spec-buttons #voidweaver.active {
+    background: rgb(49, 12, 99);
+}
+
 .spec-buttons button:hover {
     background: #4c4c7f;
 }
 
 .spec-buttons .active {
-    background: #663399;
     font-weight: bold;
 }
 
@@ -93,18 +98,79 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Tab Content */
+
 .tab-content {
-    background: #252547;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
-    max-width: 800px;
+    max-width: 1000px;
     text-align: center;
     opacity: 0;
     animation: fadeIn 0.3s forwards;
+    background-color: rgba(30, 32, 60, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.4);
+    
 }
 
+.tab-content p {
+    margin-bottom: 1.5rem;
+    text-align:left;
+    line-height: 1.6;
+}
+.tab-content h2 {
+    text-align: left;
+    padding-left: 0.5rem;
+    font-family: 'NEXA';
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.tab-content h3 {
+    text-align: left;
+    padding-left: 0.5rem;
+    font-family: 'NEXA';
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.guide-page a {
+    color: rgb(189, 163, 15);
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.positive {
+    color: rgb(10, 141, 10);
+    font-weight: bold;
+}
+.negative {
+    color: red; 
+    font-weight: bold; 
+  }
+
+  .rotation-list {
+    list-style-type: none; 
+    padding-left: 0; 
+    text-align: left;
+  }
+  
+  .rotation-list li {
+    position: relative;
+    padding-left: 1.5rem; 
+    margin-bottom: 1.5rem; 
+  }
+  
+  .rotation-list li::before {
+    content: '•'; 
+    position: absolute;
+    left: 0;
+    color: #663399; 
+    font-size: 1.5rem; 
+    line-height: 1rem; 
+  }
+  .rotation-list-spec {
+    text-align: left;
+  }
 /* Fade In Animation */
 @keyframes fadeIn {
     from {
@@ -114,5 +180,83 @@ h1 {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .tab-content {
+        width: 90%;
+    }
+
+    .spec-buttons button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .tab-container button {
+        font-size: 0.9rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .guide-page {
+        padding: 1rem;
+    }
+
+    .spec-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .spec-buttons button {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .tab-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tab-container button {
+        width: 100%;
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .tab-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tab-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .tab-content h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .spec-buttons button {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+
+    .tab-container button {
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+
+    .tab-content h2 {
+        font-size: 1rem;
+    }
+
+    .tab-content h3 {
+        font-size: 0.875rem;
     }
 }

@@ -43,6 +43,7 @@
     0 0 20px rgba(75, 0, 130, 0.5),   /* Deep indigo for depth */
     0 0 30px rgba(0, 0, 0, 0.9);      /* Black core for void effect */
     pointer-events: none;
+    
 }
 
 .ascend-button {
