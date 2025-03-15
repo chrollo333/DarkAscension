@@ -10,12 +10,30 @@
   }
 }
 
+@font-face {
+  font-family: 'NEXA';
+  src: url('../../assets/Nexa-ExtraLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../assets/Poppins-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  height: 100%;  /* Ensure both elements cover the full height */
+  margin: 0;  /* Remove any default margin */
+}
 body {
   background: linear-gradient(45deg, #381941, #1b0f32, #1d0922);
   background-size: 400% 400%;
+  background-attachment: fixed;
   animation: void-energy 10s ease infinite;
   color: white;
-  font-family: Arial, sans-serif;
-  height: 100vh;  
+  font-family: Arial, sans-serif; 
+  min-height: 100vh;
   overflow-x: hidden;
 }
