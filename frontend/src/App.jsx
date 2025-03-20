@@ -7,7 +7,7 @@ import Navbar from "/src/global/Navbar/Navbar";
 import GuideSelection from "/src/pages/GuidePages/GuideSelection";
 import GuidePage from "/src/pages/GuidePages/GuidePage";
 import NewsFeed from "/src/pages/News/NewsFeed";
-
+import Discussion from "/src/pages/Discussion/Discussion"
 function App() {
   return (
     <Router>
@@ -18,6 +18,7 @@ function App() {
           <Route path="/guides" element={<GuideSelection />} />
           <Route path="/guides/:spec" element={<GuidePage />} />
           <Route path="/news" element={<NewsFeed />} />
+          <Route path="/feedback" element={<Discussion />} />
         </Routes>
         <AuthorLinks /> 
         </div>

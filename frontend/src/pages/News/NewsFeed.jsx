@@ -15,12 +15,7 @@ const NewsFeed = () => {
 
 
     const sanitizeDescription = (description) => {
-        let sanitizedDescription = description;
 
-        sanitizedDescription = sanitizedDescription.replace(
-            /<a[^>]*>Continue Reading<\/a>/,
-            '<a href="#" class="continue-reading-link">Continue Reading</a>'
-        );
         return sanitizeHtml(description, {
             allowedTags: [ 'p', 'b', 'i', 'em', 'strong', 'a', 'ul', 'ol', 'li', 'border' ], // You can customize the allowed tags
             allowedAttributes: {
