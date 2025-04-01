@@ -18,7 +18,7 @@ function App() {
           <Route path="/guides" element={<GuideSelection />} />
           <Route path="/guides/:spec" element={<GuidePage />} />
           <Route path="/news" element={<NewsFeed />} />
-          <Route path="/feedback" element={<Discussion />} />
+          <Route path="/discussion" element={<Discussion />} />
         </Routes>
         <AuthorLinks /> 
         </div>

@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import feedback_list
+from .views import discussion_list
 
 urlpatterns = [
-    path('api/feedback/', feedback_list, name='feedback_list'),
+    path('api/discussion/', discussion_list, name='discussion_list'),
 ]
