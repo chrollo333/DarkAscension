@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Home.css";
 
-const IntroView = () => {
+const IntroView = ( {aboutSectionRef}) => {
   const [scrollOpacity, setScrollOpacity] = useState(1);
-  const aboutSectionRef = useRef(null);
+  
 
   useEffect(() => {
     const handleScroll = () => {

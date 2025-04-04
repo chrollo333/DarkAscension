@@ -26,10 +26,10 @@ const Talents = ({ spec }) => {
                 {spec === "voidweaver" && (
                     <>
                         <h3>Raiding</h3>
-                        <p>Voidweavers will spec out of Shadowy Apparitions boosting talents and instead opt for <a href="https://www.wowhead.com/spell=73510/mind-spike"></a> oriented route.</p>
+                        <p>Voidweavers will spec out of Shadowy Apparitions boosting talents and instead opt for <a href="https://www.wowhead.com/spell=73510/mind-spike"></a> oriented route for more single target damage.</p>
                         <img src={voidweaverRaidImage} alt="Voidweaver Raiding Talents" className="talent-image" />
                         <h3>Mythic+</h3>
-                        <p>In Mythic+, Voidweaver favors <a href="https://www.wowhead.com/spell=373280/idol-of-nzoth"></a> over <a href="https://www.wowhead.com/spell=73510/mind-spike"></a></p>
+                        <p>In Mythic+, Voidweaver favors <a href="https://www.wowhead.com/spell=373280/idol-of-nzoth"></a> over <a href="https://www.wowhead.com/spell=73510/mind-spike"></a> due to its increased AoE capabilities.</p>
                         <img src={voidweaverMImage} alt="Voidweaver Mythic+ Talents" className="talent-image" />
                     </>
                 )}

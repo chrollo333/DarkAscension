@@ -65,6 +65,10 @@ h2 {
     display: none;
 }
 
+.article-date p{
+    color: #eaeaeaa9;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .news-feed {

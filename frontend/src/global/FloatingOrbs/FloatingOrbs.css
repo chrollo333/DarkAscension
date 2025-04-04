@@ -1,0 +1,33 @@
+.floating-orbs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures orbs don't interfere with user interaction */
+    overflow: hidden;
+    z-index: -1; /* Keeps orbs behind everything */
+}
+
+.orb {
+    position: absolute;
+    bottom: -10px; /* Start just below the screen */
+    background-color: rgba(255, 255, 255, 0.8); /* Light orb effect */
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 1; /* Maintain visibility for most of the animation */
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0; /* Fade out as it reaches the top */
+    }
+}

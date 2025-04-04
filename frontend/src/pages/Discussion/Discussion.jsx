@@ -52,7 +52,7 @@ const Discussion = () => {
                 setNickname("");
                 setContent("");
                 setAnonymous(false);
-                fetchComments(); // Refresh the comments after submission
+                fetchComments();
             } else {
                 setSuccess("Failed to submit comment.");
             }
@@ -69,48 +69,61 @@ const Discussion = () => {
 
     return (
         <div className="discussion-body">
-            <h2>Discussion</h2>
-
-            {/* Success/Error message */}
-            {success && <p>{success}</p>}
-
-            {/* Comment Form */}
-            <form onSubmit={handleSubmit} className="form-submit">
-                <label>
-                    Nickname:
-                    <input
-                        type="text"
-                        value={nickname}
-                        onChange={(e) => setNickname(e.target.value)}
-                        disabled={anonymous}
-                        required={!anonymous}
-                    />
-                </label>
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={anonymous}
-                        onChange={() => setAnonymous(!anonymous)}
-                    />
-                    Stay Anonymous
-                </label>
-                <label>
-                    Comment:
-                    <textarea
-                        value={content}
-                        onChange={(e) => setContent(e.target.value)}
-                        required
-                    />
-                </label>
-                <button type="submit">Submit</button>
-            </form>
+            <h2>DISCUSSION 🗣️</h2>
 
            
+            {success && <p className="success-message">{success}</p>}
+
+            <div className="form-group">
+                <form onSubmit={handleSubmit} className="form-submit">
+                    <div className="nickname-input">
+                        <label>
+                            <span className="form-text">Nickname:</span>
+                            <input
+                                type="text"
+                                value={nickname}
+                                onChange={(e) => setNickname(e.target.value)}
+                                disabled={anonymous}
+                                required={!anonymous}
+                            />
+                        </label>
+                    </div>
+
+                    <div className="checkbox-input">
+                        <label>
+                            <input
+                                type="checkbox"
+                                checked={anonymous}
+                                onChange={() => setAnonymous(!anonymous)}
+                            />
+                            Stay Anonymous
+                        </label>
+                    </div>
+
+                    <div className="comment-textarea">
+                        <label>
+                            <span className="form-text">Comment:</span>
+                            <textarea
+                                value={content}
+                                onChange={(e) => setContent(e.target.value)}
+                                required
+                            />
+                        </label>
+                    </div>
+
+                    <button type="submit" className="submit-button">Submit</button>
+                </form>
+            </div>
+
             <h3>Latest Comments</h3>
-            <ul className="comment">
+            <ul className="comment-section">
                 {comments.map((comment) => (
-                    <li key={comment.id}>
-                        <p>{formatDate(comment.created_at)}</p><strong>{comment.nickname || "Anonymous"}:</strong> {comment.content}
+                    <li key={comment.id} className="comment">
+                        <p>{formatDate(comment.created_at)}</p>
+                        <strong className={comment.nickname ? "" : "anonymous"}>
+                            {comment.nickname || "Anonymous"}:
+                        </strong>
+                        <span className="comment-content"> {comment.content}</span>
                     </li>
                 ))}
             </ul>

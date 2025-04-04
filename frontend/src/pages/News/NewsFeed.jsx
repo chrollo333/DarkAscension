@@ -27,10 +27,13 @@ const NewsFeed = () => {
         
     };
 
-
+    const formatDate = (dateString) => {
+        const options = { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" };
+        return new Intl.DateTimeFormat("en-US", options).format(new Date(dateString));
+    };
     return (
         <div className="news-feed">
-            <h2 className="feed-title">LATEST NEWS</h2>
+            <h2 className="feed-title">LATEST NEWS 🗞️</h2>
             {news.map((article, index) => (
                 <div key={index} className="news-article">
                     <h3 className="article-title">
@@ -42,7 +45,7 @@ const NewsFeed = () => {
                     <p className="article-description" dangerouslySetInnerHTML={{ __html: sanitizeDescription(article.description) }}/>
                     {article.image_url && <img src={article.image_url} alt={article.title} className="article-image" />}
                     <small className="article-date">
-                        {new Date(article.pub_date).toLocaleDateString()}
+                        <p className="article-date">{formatDate(article.pub_date)}</p>
                     </small>
                 </div>
             ))}

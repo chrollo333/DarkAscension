@@ -1,6 +1,7 @@
 import React from "react";
 import githubIcon from "../../assets/github.svg";
 import discordIcon from "../../assets/discord.svg";
+import emailIcon from "../../assets/email.svg";
 import "./AuthorLinks.css";
 
 const AuthorLinks = () => {
@@ -11,6 +12,9 @@ const AuthorLinks = () => {
       </a>
       <a href="https://discordapp.com/users/232067112623931393" target="_blank" rel="noopener noreferrer" className="link">
         <img src={discordIcon} alt="Discord" className="icon" /> lucasxd1
+      </a>
+      <a href="https://discordapp.com/users/232067112623931393" target="_blank" rel="noopener noreferrer" className="link">
+        <img src={emailIcon} alt="Email" className="icon" /> lukasheinz777@gmail.com
       </a>
     </section>
   );

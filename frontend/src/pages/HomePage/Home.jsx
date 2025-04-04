@@ -3,15 +3,15 @@ import "./Home.css"
 import IntroView from "./components/IntroView";
 import AboutSection from "./components/AboutSection";
 import PanelFooter from "./components/Panels/PanelFooter";
-import Navbar from "../../global/Navbar/Navbar";
-const Home = () => {
 
+const Home = () => {
+ const aboutSectionRef = useRef(null);
 
   return (
     <>
       <div className="home-container">
-        <IntroView />
-        <AboutSection />
+        <IntroView aboutSectionRef={aboutSectionRef}/>
+        <AboutSection ref={aboutSectionRef}/>
         <div className="panel-container" >
           <PanelFooter /> </div>
       </div>

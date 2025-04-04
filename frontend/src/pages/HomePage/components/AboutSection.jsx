@@ -1,12 +1,12 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import "../Home.css";
 
-const AboutSection = () => {
+const AboutSection = forwardRef((props, ref) => {
 
 
 
   return (
-    <section className="about-section">
+    <section ref={ref} className="about-section">
       <img
         src="../src/assets/xalatath.png"
         alt="Xal'atath"
@@ -26,6 +26,6 @@ const AboutSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default AboutSection;

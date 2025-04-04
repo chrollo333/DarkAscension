@@ -8,11 +8,16 @@ import GuideSelection from "/src/pages/GuidePages/GuideSelection";
 import GuidePage from "/src/pages/GuidePages/GuidePage";
 import NewsFeed from "/src/pages/News/NewsFeed";
 import Discussion from "/src/pages/Discussion/Discussion"
+import UpArrow from "/src/global/UpArrow/UpArrow"
+import FloatingOrbs from "/src/global/FloatingOrbs/FloatingOrbs"
+
 function App() {
   return (
     <Router>
        <div className="app-container">
+        <FloatingOrbs />
         <Navbar />
+        <UpArrow />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/guides" element={<GuideSelection />} />

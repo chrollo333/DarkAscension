@@ -33,7 +33,7 @@ const GuidePage = () => {
   return (
     <div className="guide-page">
       <div className="specialization-selection">
-        <h1>{spec.charAt(0).toUpperCase() + spec.slice(1)} Guide</h1>
+        <h1>{spec.charAt(0).toUpperCase() + spec.slice(1)} Guide 🎓</h1>
         <div className="spec-buttons">
           <button onClick={() => navigate("/guides/archon")} className={spec === "archon" ? "active" : ""} id="archon">
             Archon

@@ -128,8 +128,8 @@
 
 @media (max-width: 768px) {
     .guide-selection {
-        flex-direction: column; /* Stack items vertically */
-        height: auto; /* Adjust height */
+        flex-direction: row;
+        top: 50%;
         padding-top: 60px;
     }
 
