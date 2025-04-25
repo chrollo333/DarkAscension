@@ -8,11 +8,11 @@ const GuideSelection = () => {
     return (
         <div className="guide-selection">
             <Link to="/guides/archon" className="guide-link archon-link">
-                    <img src="../../../../src/assets/specs/archon.jpg" alt="Archon" />
+                <img src="../../../../src/assets/specs/archon.jpg" alt="Archon" />
             </Link>
-            
-            <Link to="/guides/voidweaver" className="guide-link voidweaver-link">  
-                    <img src="../../../../src/assets/specs/voidweaver.jpg" alt="Voidweaver"/>     
+
+            <Link to="/guides/voidweaver" className="guide-link voidweaver-link">
+                <img src="../../../../src/assets/specs/voidweaver.jpg" alt="Voidweaver" />
             </Link>
         </div>
     )

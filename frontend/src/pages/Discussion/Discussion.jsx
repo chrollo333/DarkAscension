@@ -71,7 +71,7 @@ const Discussion = () => {
         <div className="discussion-body">
             <h2>DISCUSSION 🗣️</h2>
 
-           
+
             {success && <p className="success-message">{success}</p>}
 
             <div className="form-group">

@@ -29,7 +29,7 @@ const GuidePage = () => {
       window.$WowheadPower.refreshLinks(); //makes sure to refresh wowhead links by calling the function for the icons to work after changing a tab 
     }
   }, [activeTab]);
-  
+
   return (
     <div className="guide-page">
       <div className="specialization-selection">
@@ -47,8 +47,8 @@ const GuidePage = () => {
 
       <div className="tab-container">
         {tabs.map((tab) => (
-          <button 
-            key={tab} 
+          <button
+            key={tab}
             className={activeTab === tab ? "active" : ""}
             onClick={() => setActiveTab(tab)}
           >

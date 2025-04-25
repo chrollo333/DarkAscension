@@ -7,11 +7,11 @@ const FloatingOrbs = () => {
     useEffect(() => {
         const createOrb = () => {
             return {
-                id: Math.random(), // Unique ID
-                size: Math.random() * 10 + 5, // Random size (5px to 15px)
-                left: Math.random() * 100, // Random position across the page
-                animationDuration: Math.random() * 10 + 5, // Speed variation (5s to 15s)
-                opacity: Math.random() * 0.5 + 0.5, // Random opacity (0.5 to 1)
+                id: Math.random(),
+                size: Math.random() * 5 + 2,
+                left: Math.random() * 100, //position
+                animationDuration: Math.random() * 10 + 5, // speed variations from 5 to 15s
+                opacity: Math.random() * 0.5 + 0.5,
             };
         };
 
@@ -19,10 +19,10 @@ const FloatingOrbs = () => {
             setOrbs((prevOrbs) => {
                 const newOrbs = [...prevOrbs, createOrb()];
 
-                // Keep a maximum number of orbs to prevent infinite growth
+                // this keeps a maximum number of orbs (to prevent infinite orbs)
                 return newOrbs.length > 30 ? newOrbs.slice(-30) : newOrbs;
             });
-        }, 1000); // Generate a new orb every second
+        }, 1000); // generates a new one every second
 
         return () => clearInterval(interval);
     }, []);

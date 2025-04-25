@@ -17,9 +17,9 @@ const Talents = ({ spec }) => {
                             <a href="https://www.wowhead.com/spell=453828/energy-cycle"></a> also means that we are required to play talents centered around <a href="https://www.wowhead.com/spell=341491/shadowy-apparitions"></a>.</p>
                         <img src={archonRaidImage} alt="Archon Raiding Talents" className="talent-image" />
                         <h3>Mythic+</h3>
-                        <p>The major difference between raiding and M+ builds comes in getting rid of 
+                        <p>The major difference between raiding and M+ builds comes in getting rid of
                             <a href="https://www.wowhead.com/spell=373212/insidious-ire?def=108688&rank=1" ></a>
-                             and opting for <a href="https://www.wowhead.com/spell=373280/idol-of-nzoth"></a> instead.</p>
+                            and opting for <a href="https://www.wowhead.com/spell=373280/idol-of-nzoth"></a> instead.</p>
                         <img src={archonMImage} alt="Archon Mythic+ Talents" className="talent-image" />
                     </>
                 )}

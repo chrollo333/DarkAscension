@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Consumables = ( { spec }) => {
+const Consumables = ({ spec }) => {
 
     return (
         <>
-           <h2>5. {spec.charAt(0).toUpperCase() + spec.slice(1)} enchants and consumables</h2>
-           <p>These will also be generalized since both specializations share the same priorities.
-            <br></br> This also means none of this applies to everyone the same way and should be taken with a grain of salt! 
-            ALWAYS sim yourself for any gear upgrade.</p>
+            <h2>5. {spec.charAt(0).toUpperCase() + spec.slice(1)} enchants and consumables</h2>
+            <p>These will also be generalized since both specializations share the same priorities.
+                <br></br> This also means none of this applies to everyone the same way and should be taken with a grain of salt!
+                ALWAYS sim yourself for any gear upgrade.</p>
             <h3>Enchants</h3>
             <p>Weapon: <a href="https://www.wowhead.com/item=223784/enchant-weapon-authority-of-the-depths">Enchant Weapon - Authority of the Depths
             </a> for raiding (ST) <br></br> <a href="https://www.wowhead.com/item=223781/enchant-weapon-authority-of-radiant-power"></a> for M+ (AoE)</p>
@@ -24,7 +24,7 @@ const Consumables = ( { spec }) => {
             <p>Health potion: <a href="https://www.wowhead.com/item=211880/algari-healing-potion"></a></p>
             <p>Weapon buff: <a href="https://www.wowhead.com/item=224105/algari-mana-oil"></a></p>
             <p>Augment rune: <a href="https://www.wowhead.com/item=224572/crystallized-augment-rune"></a></p>
-            
+
         </>
     );
 };
