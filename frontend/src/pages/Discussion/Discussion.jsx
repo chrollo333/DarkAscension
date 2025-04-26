@@ -15,7 +15,7 @@ const Discussion = () => {
     // Fetch latest comments from the backend
     const fetchComments = async () => {
         try {
-            const response = await fetch("http://127.0.0.1:8000/api/discussion/");
+            const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/discussion/`);
             if (response.ok) {
                 const data = await response.json();
                 setComments(data);
