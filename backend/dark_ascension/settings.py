@@ -128,6 +128,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Allows the React app to access the Django API
+    "https://darkascension.netlify.app",
+    "https://darkascension.onrender.com",
 ]
 
 REST_FRAMEWORK = {
