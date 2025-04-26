@@ -7,7 +7,7 @@ const NewsFeed = () => {
     
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/news/")
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/api/news/`)
             .then((res) => res.json())
             .then((data) => setNews(data))  
             .catch((err) => console.error("Error fetching news:", err));
