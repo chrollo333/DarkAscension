@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 import "../Home.css";
-
+import xalatath from "/src/assets/xalatath.png";
 const AboutSection = forwardRef((props, ref) => {
 
 
@@ -8,7 +8,7 @@ const AboutSection = forwardRef((props, ref) => {
   return (
     <section ref={ref} className="about-section">
       <img
-        src="../src/assets/xalatath.png"
+        src={xalatath}
         alt="Xal'atath"
         className="xalatath"
       />
