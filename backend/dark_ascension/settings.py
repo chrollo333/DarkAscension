@@ -80,18 +80,14 @@ WSGI_APPLICATION = 'dark_ascension.wsgi.application'
 
 
 try:
-        DATABASES = {
-            'default': dj_database_url.parse("postgresql://darkascension_db_user:dV2egGB8Sbdv9h5w51fbCS1IA4t53QNC@dpg-d089k695pdvs739ju0ag-a/darkascension_db", conn_max_age=600)
-        }
+    DATABASES = {
+        'default': dj_database_url.parse(
+            "postgresql://darkascension_db_user:dV2egGB8Sbdv9h5w51fbCS1IA4t53QNC@dpg-d089k695pdvs739ju0ag-a/darkascension_db",
+            conn_max_age=600
+        )
+    }
 except Exception as e:
-        print("⚠️ Failed to parse DATABASE_URL, falling back to SQLite:", e)
-        DATABASES = {
-            'default': {
-                'ENGINE': 'django.db.backends.sqlite3',
-                'NAME': BASE_DIR / 'db.sqlite3',
-            }
-        }
-else:
+    print("⚠️ Failed to parse DATABASE_URL, falling back to SQLite:", e)
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
