@@ -80,7 +80,12 @@ WSGI_APPLICATION = 'dark_ascension.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-
+if os.environ.get('DJANGO_DEVELOPMENT') == 'True':
+    print("Running in development mode")
+    from dotenv import load_dotenv
+    load_dotenv()
+else:
+    print("Running in production mode")
 
 if os.environ.get('DJANGO_DEVELOPMENT') == 'True':
     print("Using local SQLite database")
