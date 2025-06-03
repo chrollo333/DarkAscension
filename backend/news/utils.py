@@ -21,7 +21,7 @@ def fetch_wowhead_news():
                 # debug : printing structure
         print(entry)
 
-        # Extract the image URL from the media:content tag manually by checking 'media_content'
+        # extract the image URL from the media:content tag manually by checking 'media_content'
         image_url = None
 
         # is 'media_content' available in the entry?

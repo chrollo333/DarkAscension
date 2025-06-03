@@ -7,7 +7,7 @@ const Discussion = () => {
     const [comments, setComments] = useState([]);
     const [success, setSuccess] = useState(null);
     const [created_at, setCreatedAt] = useState("");
-    // Fetch comments when the component loads
+    // Fetch comments when the component loads []
     useEffect(() => {
         fetchComments();
     }, []);
@@ -32,7 +32,7 @@ const Discussion = () => {
         e.preventDefault();
 
         const discussionData = {
-            nickname: anonymous ? null : nickname, // Null means anonymous
+            nickname: anonymous ? null : nickname, // null means anonymous
             content,
             created_at,
         };

@@ -9,9 +9,12 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+from dotenv import load_dotenv
 from pathlib import Path
+import os
 import dj_database_url
+
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +28,7 @@ SECRET_KEY = 'django-insecure-&m3gc)m%wrj5i=*4+s500sm(!wbdhz^&i@2u-*78(i8i!o-xu2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['darkascension.onrender.com']
+ALLOWED_HOSTS = ['darkascension.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -79,22 +82,22 @@ WSGI_APPLICATION = 'dark_ascension.wsgi.application'
 
 
 
-try:
-    DATABASES = {
-        'default': dj_database_url.parse(
-            "postgresql://darkascension_db_user:dV2egGB8Sbdv9h5w51fbCS1IA4t53QNC@dpg-d089k695pdvs739ju0ag-a/darkascension_db",
-            conn_max_age=600
-        )
-    }
-except Exception as e:
-    print("⚠️ Failed to parse DATABASE_URL, falling back to SQLite:", e)
+if os.environ.get('DJANGO_DEVELOPMENT') == 'True':
+    print("Using local SQLite database")
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
+else:
+    print("Using production PostgreSQL database (supabase)")
+    DATABASES = {
+        'default': dj_database_url.parse(
+            "postgresql://postgres:mmzaTeal2bKgtWoy@db.spfnkklnsgbvnftbofun.supabase.co:5432/postgres",
+            conn_max_age=600
+        )
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

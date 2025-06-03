@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
 import "./GuideSelection.css";
 import { Link } from 'react-router-dom';
-import gsap from 'gsap';
 import archonImg from "/src/assets/specs/archon.jpg";
 import voidWeaverImg from "/src/assets/specs/voidweaver.jpg";
 
