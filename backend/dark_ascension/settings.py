@@ -99,7 +99,7 @@ else:
     print("Using production PostgreSQL database (supabase)")
     DATABASES = {
         'default': dj_database_url.parse(
-            "postgresql://postgres:mmzaTeal2bKgtWoy@db.spfnkklnsgbvnftbofun.supabase.co:5432/postgres",
+            os.environ.get('SUPABASE_DB_URL'),
             conn_max_age=600
         )
     }
