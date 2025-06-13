@@ -96,10 +96,10 @@ if os.environ.get('DJANGO_DEVELOPMENT') == 'True':
         }
     }
 else:
-    print("Using production PostgreSQL database (supabase)")
+    print("Using production PostgreSQL database (neon)")
     DATABASES = {
         'default': dj_database_url.parse(
-            os.environ.get('SUPABASE_DB_URL'),
+            os.environ.get('DB_URL'),
             conn_max_age=600
         )
     }

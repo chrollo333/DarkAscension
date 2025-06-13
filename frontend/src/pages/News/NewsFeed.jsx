@@ -21,7 +21,7 @@ const NewsFeed = () => {
             allowedAttributes: {
                 'a': [ 'href' ], // Allow 'href' attribute in <a> tags
             },
-            allowedIframeHostnames: ['www.youtube.com'], // If you need to allow embedded iframes from specific sites
+            allowedIframeHostnames: ['www.youtube.com'], 
 
         });
         
