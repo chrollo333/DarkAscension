@@ -22,7 +22,7 @@ The frontend is currently hosted on Netlify and backend on Neon (database)+Rende
 **Frontend:**
 - React + Vite
 - JavaScript
-- Tailwind CSS
+- CSS
 
 
 **Backend:**
